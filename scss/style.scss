@@ -34,7 +34,7 @@
   position: absolute;
 }
 body {
-  background-image: url(./fotos/2267674869_198160459191212_8163799643473178141_n.jpg);
+  background-image: url(../fotos/2267674869_198160459191212_8163799643473178141_n.jpg);
   background-color: rgb(22, 21, 21);
   background-blend-mode: soft-light;
   background-position: center;
@@ -230,28 +230,13 @@ h3 {
     "covid covid"
     "footer footer";
 }
-fieldset {
-  border-style: solid;
-}
 .about {
   grid-area: about;
 }
 .covid {
   grid-area: covid;
 }
-.covid_list {
-  list-style: none;
-  margin: 10px;
-  padding: 10px;
-}
-.covid_flyer {
-  margin: 10px;
-  padding: 10px;
-}
-.about_us {
-  margin: 10px;
-  padding: 10px;
-}
+
 /*---------MEDIA-----------------*/
 @media screen and (max-width: 320px) {
   .principal {
@@ -335,4 +320,55 @@ fieldset {
     grid-template-rows: (5, auto);
     grid-template-areas: "logo" "nav" "about" "covid" "footer";
   }
+}
+/*------------EXTEND----------------*/
+.about {
+  background-color: grey;
+  background-blend-mode: soft-light;
+}
+.about_us {
+  @extend .about;
+}
+.covid_flyer {
+  @extend .about;
+  background-color: rgb(38, 65, 56);
+}
+.covid_list {
+  @extend .about;
+  list-style: none;
+  background-color: rgb(151, 126, 93);
+}
+/*---------------MIXIN------------------*/
+$szgeneral: 70%;
+$szpersonas: 30%;
+$szmesa: 20%;
+
+@mixin comentario($height, $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin formulario($szgral) {
+  width: $szgral;
+  color: black;
+  margin: 1rem;
+  text-align: center;
+}
+.nombres {
+  @include formulario($szgeneral);
+}
+.apellidos {
+  @include formulario($szgeneral);
+}
+.email {
+  @include formulario($szgeneral);
+}
+.personas {
+  @include formulario($szpersonas);
+}
+.mesas {
+  @include formulario($szmesa);
+}
+.comentario {
+  @include comentario(30px, 30%);
 }
