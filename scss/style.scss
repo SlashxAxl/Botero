@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /*--------INDEX Y AJUSTES GENERALES--------*/
 .principal {
   margin: 20px auto;
@@ -10,13 +11,12 @@
   display: grid;
   gap: 4px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(4, auto);
   grid-template-areas:
-    "logo logo"
-    "nav nav"
-    "espacio espacio_desc"
-    "ubicacion ubicacion"
-    "footer footer";
+    "navmenu navmenu"
+    "espacio_desc espacio_desc"
+    "espacio espacio"
+    "ubicacion ubicacion";
 }
 .logo {
   width: 500px;
@@ -33,6 +33,7 @@
   height: 30px;
   position: absolute;
 }
+
 body {
   background-image: url(../fotos/2267674869_198160459191212_8163799643473178141_n.jpg);
   background-color: rgb(22, 21, 21);
@@ -109,8 +110,12 @@ footer {
 .ubicacion {
   grid-area: ubicacion;
 }
-.nav {
-  grid-area: nav;
+.navbar {
+  grid-area: navmenu;
+}
+.navbar{
+  justify-content: space-evenly;
+  border-radius: 4px;
 }
 .footer {
   grid-area: footer;
@@ -121,15 +126,13 @@ footer {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(7, auto);
+  grid-template-rows: repeat(5, auto);
   grid-template-areas:
-    "logo logo"
-    "nav nav"
+    "navmenu navmenu"
     "events_intro events_intro"
     "eventos_eventos eventos_eventos"
     "eventos_promos eventos_promos"
-    "events_extrainfo events_extrainfo"
-    "footer footer";
+    "events_extrainfo events_extrainfo";
 }
 .events_intro {
   font-size: 25px;
@@ -196,14 +199,12 @@ fieldset {
 .principal_reservaciones {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(4, auto);
   grid-template-areas:
-    "logo logo"
-    "nav nav"
+    "navmenu navmenu"
     "contacto_intro contacto_intro"
     "reservaciones reservaciones"
-    "reserv_extrainfo reserv_extrainfo"
-    "footer footer";
+    "reserv_extrainfo reserv_extrainfo";
   gap: 5px;
 }
 .reserv_extrainfo {
@@ -222,13 +223,11 @@ h3 {
 .principal_about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:
-    "logo logo"
-    "nav nav"
+    "navmenu navmenu"
     "about about"
-    "covid covid"
-    "footer footer";
+    "covid covid";
 }
 .about {
   grid-area: about;
@@ -236,89 +235,93 @@ h3 {
 .covid {
   grid-area: covid;
 }
-
+/*--------FAVORITOS--------------*/
+.principal_favoritos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: (4,auto);
+  grid-template-areas: 
+  "navmenu navmenu"
+  "fav_info fav_info"
+  "carousel carousel"
+  "fav_extra fav_extra";
+}
+.fav_info{
+  grid-area: fav_info;
+}
+.carousel{
+  grid-area: carousel;
+}
+.fav_extra{
+  grid-area: fav_extra;
+}
 /*---------MEDIA-----------------*/
-@media screen and (max-width: 320px) {
-  .principal {
-    margin: 10px auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(10 auto);
-    grid-template-areas: "logo" "nav" "espacio" "espacio_desc" "ubicacion" "footer";
-  }
-  .principal_eventos {
-    margin: 10px auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(14, auto);
-    grid-template-areas: "logo" "nav" "events_info" "eventos_eventos" "eventos_promos" "event_extrainfo" "footer";
-  }
-  .principal_reservaciones {
-    margin: 10px auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, auto);
-    grid-template-areas: "logo" "nav" "contacto_intro" "reservaciones" "reserv_extrainfo" "footer";
-  }
-  .principal_about {
-    margin: 10px auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: (10, auto);
-    grid-template-areas: "logo" "nav" "about" "covid" "footer";
-  }
-}
-@media screen and (max-width: 1024px) {
-  .principal {
-    margin: 10px auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(10 auto);
-    grid-template-areas: "logo" "nav" "espacio" "espacio_desc" "ubicacion" "footer";
-  }
-  .principal_eventos {
-    margin: 10px auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(14, auto);
-    grid-template-areas: "logo" "nav" "events_intro" "eventos_eventos" "eventos_promos" "events_extrainfo" "footer";
-  }
-  .principal_reservaciones {
-    margin: 10px auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, auto);
-    grid-template-areas: "logo" "nav" "contacto_intro" "reservaciones" "reserv_extrainfo" "footer";
-  }
-  .principal_about {
-    margin: 10px auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: (10, auto);
-    grid-template-areas: "logo" "nav" "about" "covid" "footer";
-  }
-}
-@media screen and (max-width: 1200px) {
-  .principal {
-    margin: 10px auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas:
-      "logo"
-      "nav"
-      "espacio" "espacio_desc"
-      "ubicacion"
-      "footer";
-  }
-  .principal_eventos {
+@media screen and (max-width: 3000px) {
+  .principal{
     margin: 10px auto;
     grid-template-columns: 1fr, 1fr;
-    grid-template-rows: repeat(7, auto);
-    grid-template-areas: "logo" "nav" "events_intro" "eventos_eventos" "eventos_promos" "events_extrainfo" "footer";
+    grid-template-rows: (4,auto);
   }
-  .principal_reservaciones {
-    margin: 10px auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "logo" "nav" "contacto_intro" "reservaciones" "reserv_extrainfo" "footer";
+}
+@media screen and (max-width: 800px) {
+  .principal{
+  margin: 10px auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: (8,auto);
+  font-size: 15px;
+  align-items: center;
+  align-self: auto;
+  width: 100%;
   }
-  .principal_about {
+  .principal_eventos{
     margin: 10px auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: (5, auto);
-    grid-template-areas: "logo" "nav" "about" "covid" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: (10,auto);
+    font-size: 15px;
+    align-items: center;
+    align-self: auto;
+    width: 100%;
+  }
+  .principal_about{
+    margin: 10px auto;
+    grid-template-columns: 1fr;
+    grid-template-rows:(6,auto);
+    font-size: 15px;
+    align-items: center;
+    align-self: auto;
+    width: 100%;
+  }
+  .principal_reservaciones{
+    margin: 10px auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: (8,auto);
+    font-size: 15px;
+    align-items: center;
+    align-self: auto;
+    width: 100%;
+  }
+  .principal_favoritos{
+    margin: 10px auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: (8,auto);
+    font-size: 15px;
+    align-items: center;
+    align-self: auto;
+    width: 100px;
+  }
+  .logo{
+    width:100%;
+    align-items: center;
+  }
+  body{
+    width: 100%;
+  }
+  .footer{
+    align-items: center;
+    width: 100%;
+  }
+  .carousel{
+    width: 100%;
   }
 }
 /*------------EXTEND----------------*/

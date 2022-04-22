@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <meta name="description" content="reservaciones para nuestro restaurante">
     <meta name="keywords" content="botero, restaurant, bar, reservaciones, comida, gourmet, mexico, monterrey, nuevo leon, cumbres ">
     <link rel="shortcut icon" href="/fotos/favicon_io (3)/favicon-32x32.png">
@@ -37,43 +37,41 @@
                 <li><a href="../pages/about.html">Conócenos</a></li>
             </ul>
         </nav>-->
-        <div class="nav wow animate__animated animate__zoomIn">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex .justify-content-evenly col-12">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="../index.html">Inicio</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../fotos/MENU.pdf" target="_blank">MENÚ</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      De la casa
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../pages/eventos.html">Eventos & Promociones</a></li>
-                        <li><a class="dropdown-item" href="../pages/favoritos.html">Favoritos de la casa</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../pages/contacto.html">Reservaciones</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../pages/about.html">Sobre nosotros</a>
-                  </li>
-                </ul>
-              </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-evenly col-12">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../fotos/MENU.pdf" target="_blank">MENÚ</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    De la casa
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="../pages/eventos.html">Eventos & Promociones</a></li>
+                      <li><a class="dropdown-item" href="../pages/favoritos.html">Favoritos de la casa</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/contacto.html">Reservaciones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/about.html">Sobre nosotros</a>
+                </li>
+              </ul>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
         <h3 class="contacto_intro wow animate__animated animate__slideInUp">¡¿Qué esperas?! contactanos por medio de esta pagina y realiza tu reservación. Recibiras algunas bebidas de cortesia y un descuento por un consumo minimo! No desaproveches esta oportunidad😉
         </h3>
         <fieldset class="reservaciones wow animate__animated animate__fadeIn">
             <legend>Botero Rest-Bar</legend>
-              <div class="nombres form-floating mb-3">
+              <div class="nombres form-floating">
                 <input type="text" class="form-control" id="nombres" placeholder="Nombres">
                 <label for="nombres">Nombre(s)</label>
               </div>
@@ -81,7 +79,7 @@
                 <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
                 <label for="apellidos">Apellido(s)</label>
               </div><br>
-              <div class="email form-floating mb-3">
+              <div class="email form-floating">
                 <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
                 <label for="email">Email</label>
               </div>
@@ -149,12 +147,8 @@
                         <option value="D-8">D-8</option>
                         <option value="D-9">D-9</option>
                         <option value="P-1">P-1</option>
-              </select><br>
-              <div class="comentario form-floating">
-                <textarea class="form-control" placeholder="Deje un comentario" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea">Comentario</label>
-              </div>
-                <div class="d-grid gap-2 d-md-block">
+              </select>
+                <div class="d-grid d-md-block"><br>
                   <button class="btn btn-primary" type="button">Enviar</button>
                   <button class="btn btn-secondary" type="button">Borrar</button>
                 </div>
