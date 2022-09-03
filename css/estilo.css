@@ -11,7 +11,10 @@
   gap: 4px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "navmenu navmenu" "espacio_desc espacio_desc" "espacio espacio" "ubicacion ubicacion"; }
+  grid-template-areas: "navmenu navmenu"
+ "espacio_desc espacio_desc"
+ "espacio espacio"
+ "ubicacion ubicacion"; }
 
 .logo {
   width: 500px;
@@ -121,7 +124,11 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: "navmenu navmenu" "events_intro events_intro" "eventos_eventos eventos_eventos" "eventos_promos eventos_promos" "events_extrainfo events_extrainfo"; }
+  grid-template-areas: "navmenu navmenu"
+ "events_intro events_intro"
+ "eventos_eventos eventos_eventos"
+ "eventos_promos eventos_promos"
+ "events_extrainfo events_extrainfo"; }
 
 .events_intro {
   font-size: 25px;
@@ -188,7 +195,10 @@ fieldset {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "navmenu navmenu" "contacto_intro contacto_intro" "reservaciones reservaciones" "reserv_extrainfo reserv_extrainfo";
+  grid-template-areas: "navmenu navmenu"
+ "contacto_intro contacto_intro"
+ "reservaciones reservaciones"
+ "reserv_extrainfo reserv_extrainfo";
   gap: 5px; }
 
 .reserv_extrainfo {
@@ -208,7 +218,9 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "navmenu navmenu" "about about" "covid covid"; }
+  grid-template-areas: "navmenu navmenu"
+ "about about"
+ "covid covid"; }
 
 .about, .about_us, .covid_flyer, .covid_list {
   grid-area: about; }
@@ -221,7 +233,10 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 4, auto;
-  grid-template-areas: "navmenu navmenu" "fav_info fav_info" "carousel carousel" "fav_extra fav_extra"; }
+  grid-template-areas: "navmenu navmenu"
+ "fav_info fav_info"
+ "carousel carousel"
+ "fav_extra fav_extra"; }
 
 .fav_info {
   grid-area: fav_info; }
@@ -292,9 +307,9 @@ h3 {
     width: 100%; } }
 
 /*------------EXTEND----------------*/
-.about, .about_us, .covid_flyer, .covid_list {
+/*.about, .about_us, .covid_flyer, .covid_list {
   background-color: grey;
-  background-blend-mode: soft-light; }
+  background-blend-mode: soft-light; }*/
 
 .covid_flyer {
   background-color: #264138; }
